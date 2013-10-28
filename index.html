@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Pull to refresh</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="css/jquery.pullRefresh.css" type="text/css">
+	</head>
+
+	<body>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+      <div id="refresh-panel" class="refresh-panel"></div>
+
+      <div id="page-inner" class="page-inner">
+        
+        <p>This neat little plugin allows you to add a cool 'pull to refresh' feature to your application.</p>
+
+        <p>Just drag down this very content area to see it in action.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitium alii laudatum. Domo ei monet, iis faciam iudicatum, ancillae percipitur terroribus domo industriae pertinax expetendum deserunt possimus, firmitatem liberalitati hostis iuste illustriora fuerit c. Grate, futurove chrysippo percurri legendis corrupte musicis incorrupte dicent censet graece, eruditus illud defendere quisque fungimur delapsa incommoda usus approbantibus, quocirca attingere illustriora politus perfecto, meminerunt malum maximeque liberalitati explicatis disputatione sola eveniet ardore pueriliter, maximasque cohaerescant disserendi aut civibus studuisse mandamus appareat altera appetendi. Sicine magistra.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitium alii laudatum. Domo ei monet, iis faciam iudicatum, ancillae percipitur terroribus domo industriae pertinax expetendum deserunt possimus, firmitatem liberalitati hostis iuste illustriora fuerit c. Grate, futurove chrysippo percurri legendis corrupte musicis incorrupte dicent censet graece, eruditus illud defendere quisque fungimur delapsa incommoda usus approbantibus, quocirca attingere illustriora politus perfecto, meminerunt malum maximeque liberalitati explicatis disputatione sola eveniet ardore pueriliter, maximasque cohaerescant disserendi aut civibus studuisse mandamus appareat altera appetendi. Sicine magistra.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitium alii laudatum. Domo ei monet, iis faciam iudicatum, ancillae percipitur terroribus domo industriae pertinax expetendum deserunt possimus, firmitatem liberalitati hostis iuste usus approbantibus, quocirca attingere illustriora politus perfecto, meminerunt malum maximeque liberalitati explicatis disputatione sola eveniet ardore pueriliter, maximasque cohaerescant disserendi aut civibus studuisse mandamus appareat altera appetendi. Sicine magistra.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitium alii laudatum. Domo ei monet, iis faciam iudicatum, ancillae percipitur terroribus domo industriae pertinax expetendum deserunt possimus, firmitatem liberalitati hostis iuste illustriora fuerit c. Grate, futurove chrysippo percurri legendis corrupte musicis incorrupte dicent censet graece, eruditus illud defendere quisque fungimur delapsa incommoda usus approbantibus, quocirca attingere illustriora politus perfecto, meminerunt malum maximeque liberalitati explicatis disputatione sola eveniet ardore pueriliter, maximasque cohaerescant disserendi aut civibus studuisse mandamus appareat altera appetendi. Sicine magistra.</p>
+
+      </div>
+
+    </div>
+
+    <script src="js/vendor/jquery-1.9.1.js"></script>
+    <script src="js/vendor/jquery.hammer-1.0.6.js"></script>
+    <script src="js/jquery.pullRefresh.js"></script>
+    <script>
+
+      $(function() {
+
+        // Initilise the plugin
+        $('#page-inner').pullRefresh({
+
+          // Set a function to be performed on update request
+          update: function(callback) {
+
+            // Fake an update
+            setTimeout(function() {
+
+              // Reset the UI
+              callback();
+
+            }, 1500);
+
+          }
+
+        });
+
+      });
+
+    </script>
+
+	</body>
+
+</html>
