@@ -24,6 +24,52 @@ Author(s):
 Usage:
 
 HTML
+<div id="page-wrapper" class="page-wrapper">
+
+  <div id="refresh-panel" class="refresh-panel"></div>
+
+  <div id="page-inner" class="page-inner"></div>
+
+</div>
+
+CSS
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-inner {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+.refresh-panel {
+  background-color: #eeeeee;
+  min-height: 60px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 0;
+  padding: 1em;
+}
 
 JS
 $('#page-inner').pullRefresh({
